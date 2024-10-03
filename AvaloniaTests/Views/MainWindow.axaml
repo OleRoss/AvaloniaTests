@@ -11,15 +11,18 @@
         x:Name="Window">
     <StackPanel>
         <TextBlock Text="{CompiledBinding Greeting^}"/>
-        <TextBlock Text="{CompiledBinding Localizer.ObserveAsd_Ff^}"/>
+        <TextBlock Text="{CompiledBinding I18N.Observables.Asd_Ff^}"/>
         <Button Content="English"
                 Command="{CompiledBinding SetLanguage}"
-                CommandParameter="en"/>
+                CommandParameter="en"
+                MinWidth="100"/>
         <Button Content="German"
                 Command="{CompiledBinding SetLanguage}"
-                CommandParameter="de"/>
+                CommandParameter="de"
+                MinWidth="100"/>
         <Button Content="French"
                 Command="{CompiledBinding SetLanguage}"
-                CommandParameter="fr"/>
+                CommandParameter="fr"
+                MinWidth="100"/>
     </StackPanel>
 </Window>

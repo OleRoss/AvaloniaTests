@@ -1,13 +1,10 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
+using AvaloniaTests.Assets;
 using AvaloniaTests.ViewModels;
 using AvaloniaTests.Views;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Localization;
-using Microsoft.Extensions.Options;
-using Microsoft.VisualBasic;
-using Strings = AvaloniaTests.Assets.Strings;
 
 namespace AvaloniaTests;
 
@@ -25,7 +22,7 @@ public partial class App : Application
             ServiceProvider provider = new ServiceCollection()
                 .AddLogging()
                 .AddLocalization()
-                .AddSingleton<StringsTest>(_ => StringsTest.Default)
+                .AddSingleton<Strings>(_ => Strings.Default)
                 .AddTransient<MainWindowViewModel>()
                 .BuildServiceProvider();
             var vm = provider.GetRequiredService<MainWindowViewModel>();
